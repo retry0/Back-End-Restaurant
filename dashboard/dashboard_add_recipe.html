@@ -7,12 +7,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">My Delivery</a>
+          <a class="navbar-brand" href="#">Back End</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
             
-            <li><a href="#" ng-click="logout()">Logout</a></li>
+            <li><a href="#" ng-click="logout()">Keluar</a></li>
           </ul>
           
         </div>
@@ -23,32 +23,32 @@
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
-            <li><a href="#!/dashboard">Overview <span class="sr-only">(current)</span></a></li>
-            <li><a href="#!/dashboard_category">Categories</a></li>
-            <li class="active"><a href="#!/dashboard_recipes">Recipes</a></li>
+            <li><a href="#!/dashboard">Dashboard <span class="sr-only">(current)</span></a>/li>
+            <li><a href="#!/dashboard_category">Kategori Makanan</a></li>
+            <li class="active"><a href="#!/dashboard_recipes">Makanan</a></li>
             <li><a href="#!/dashboard_slider">Slider</a></li>
-            <li><a href="#!/dashboard_order">Orders</a></li>
-            <li><a href="#!/dashboard_users">Users</a></li>
+         <li><a href="#!/dashboard_order">Pesanan</a></li>
+            <li><a href="#!/dashboard_users">Pengguna</a></li>
           </ul>
          
         </div>
           <div class="row">
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <h1 class="page-header">Recipes</h1>
+          <h1 class="page-header">Makanan</h1>
             <div class="row" ng-controller="DashRecCtrl">
        
   
      <div class="col-md-5">
-    <h3>Add Recipe</h3>
+    <h3>Tambah Makanan</h3>
         <form ng-submit="addRec()">
   <div class="form-group">
-    <label>Name</label>
+    <label>Nama Makanan</label>
     <input type="text" class="form-control" ng-model="name"  placeholder="name">
-  <label>Description</label>
+  <label>Keterangan Makanan</label>
     <input type="text" class="form-control" ng-model="description"  placeholder="description">
-      <label>Shipping Time</label>
+      <label>Waktu Pengiriman</label>
     <input type="text" class="form-control" ng-model="shtime"  placeholder="Shipping Time">
-        <label>Category</label>
+        <label>Kategori Makanan</label>
       <br>
       
       <select ng-model="category">
@@ -58,13 +58,13 @@
 
 
 
-      <label>image</label>
+      <label>Gambar Makanan</label>
     <input type="text" class="form-control" ng-model="image"  placeholder="image">
-      <label>price</label>
+      <label>Harga Makan</label>
     <input type="text" class="form-control" ng-model="price"  placeholder="price">
   </div>
-  <button type="submit" class="btn btn-default">Submit</button>
-<a href="#!/dashboard_recipes"><button class="btn btn-danger" >Cancel</button></a> 
+  <button type="submit" class="btn btn-default">Simpan</button>
+<a href="#!/dashboard_recipes"><button class="btn btn-danger" >Kembali</button></a> 
          
 </form>
     

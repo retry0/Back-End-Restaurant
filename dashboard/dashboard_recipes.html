@@ -7,12 +7,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">My Delivery</a>
+          <a class="navbar-brand" href="#">Back End</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
             
-            <li><a href="#" ng-click="logout()">Logout</a></li>
+            <li><a href="#" ng-click="logout()">Keluar</a></li>
           </ul>
           
         </div>
@@ -23,28 +23,28 @@
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
-            <li><a href="#!/dashboard">Overview <span class="sr-only">(current)</span></a></li>
-            <li><a href="#!/dashboard_category">Categories</a></li>
-            <li class="active"><a href="#!/dashboard_recipes">Recipes</a></li>
+            <li><a href="#!/dashboard">Dashboard <span class="sr-only">(current)</span></a>/li>
+            <li><a href="#!/dashboard_category">Kategori Makanan</a></li>
+            <li class="active"><a href="#!/dashboard_recipes">Makanan</a></li>
             <li><a href="#!/dashboard_slider">Slider</a></li>
-            <li><a href="#!/dashboard_order">Orders</a></li>
-            <li><a href="#!/dashboard_users">Users</a></li>
+            <li><a href="#!/dashboard_order">Pesanan</a></li>
+			<li><a href="#!/dashboard_users">Pengguna</a></li>          
           </ul>
          
         </div>
           <div class="row">
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <h1 class="page-header">Recipes</h1>
+          <h1 class="page-header">Makanan</h1>
             <div class="row" ng-controller="RecCtrl">
        
    
     <div class="table-responsive" ng-show="addShowForm">
-       <a href="#!/dashboard_add_recipe"><button class="btn btn-success" >Add</button></a> 
+       <a href="#!/dashboard_add_recipe"><button class="btn btn-success" >Tambah</button></a> 
        <table class="table table-striped" >
         <thead>
             <tr>
                 
-                <th>Name</th>
+                <th>Nama Makanan</th>
                 <th>Category</th>
                 <th>Action</th>
             </tr> 
@@ -55,8 +55,8 @@
                <td>{{rec.name}}</td>
                <td>{{rec.category}}</td>
                
-               <td><a class="btn btn-default" ng-click="ShowEditForm(rec)">Edit</a>
-                   <a class="btn btn-danger" ng-click="removeRec(rec)">Delete</a>
+               <td><a class="btn btn-default" ng-click="ShowEditForm(rec)">Ubah</a>
+                   <a class="btn btn-danger" ng-click="removeRec(rec)">Hapus</a>
                </td>
             </tr> 
            
@@ -66,14 +66,14 @@
          
     </div>
      <div class="col-md-5" ng-show="editShowForm">
-    <h3>Edit Recipe</h3>
+    <h3>Ubah Makanan</h3>
         <form ng-submit="editRec()">
   <div class="form-group">
-    <label>Name</label>
+    <label>Nama Makanan</label>
     <input type="text" class="form-control" ng-model="name"  placeholder="name">
-  <label>Description</label>
+  <label>Keterangan</label>
     <input type="text" class="form-control" ng-model="description"  placeholder="description">
-         <label>Category</label>
+         <label>Kategori Makanan</label>
       <br>
       
       <select ng-model="category">
@@ -81,13 +81,13 @@
 </select>
   <br>
 
-      <label>image</label>
+      <label>Gambar Makanan (URL)</label>
     <input type="text" class="form-control" ng-model="image"  placeholder="image">
-      <label>price</label>
+      <label>Harga</label>
     <input type="text" class="form-control" ng-model="price"  placeholder="price">
   </div>
-  <button type="submit" class="btn btn-default">Submit</button>
-             <button class="btn btn-danger" ng-click="cancelCat()">Cancel</button>
+  <button type="submit" class="btn btn-default">Simpan</button>
+             <button class="btn btn-danger" ng-click="cancelCat()">Kembali</button>
            
 </form>
     
